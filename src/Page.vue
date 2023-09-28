@@ -59,7 +59,7 @@
         <SidebarItem :icon="mdiInformation" :active="showFAQ" to="/om">
           About the Fruit Map
         </SidebarItem>
-        <SidebarItem :icon="mdiImagePlus" :active="showAfmib" to="/afmib">
+        <SidebarItem :icon="mdiImagePlus" :active="showAddMapBulk" to="/addmapbulk">
           Add Fruit Map in Bulk
         </SidebarItem>
       </v-list>
@@ -90,7 +90,7 @@
         @close-drawer="drawer = null"
       />
       <AboutUs v-model="showFAQ" />
-      <AboutUs v-model="showAfmib" />
+      <AddMapBulk v-model="showAddMapBulk" />
       <v-snackbar v-model="offlineWarning" :timeout="-1" color="warning">
         We could not find any internet connection at this time. 
         You will not be able to add or edit trees until you are connected.
@@ -107,6 +107,7 @@
 <script>
 import TheMap from "./components/Map.vue"
 import AboutUs from "./components/About.vue"
+import AddMapBulk from "./components/AddMapBulk.vue"
 import SidebarItem from "./components/SidebarItem.vue"
 import {
   mdiClose,
@@ -135,6 +136,7 @@ export default {
   components: {
     TheMap,
     AboutUs,
+    AddMapBulk,
     SidebarItem,
   },
   props: {
@@ -145,7 +147,7 @@ export default {
       offlineWarning: this.$store.state.offline,
 
       showFAQ: false,
-      showAfmib: false,
+      showAddMapBulk: false,
 
       /* v-navigation-drawer */
       drawer: null, // null means closed on mobile, open on desktop
@@ -188,7 +190,7 @@ export default {
     $route: function (r) {
       // Check for special routes
       this.showFAQ = r.path === "/om"
-      this.showAfmib = r.path === "/afmib"
+      this.showAddMapBulk = r.path === "/addmapbulk"
       if ("goatcounter" in window) {
         // send a page view to goatcounter
         // window.goatcounter.allow_local = true
@@ -206,11 +208,11 @@ export default {
         this.$router.push("/")
       }
     },
-    showAfmib: function (state) {
+    showAddMapBulk: function (state) {
       // HACK
       // Checking if the dialog was closed, but the route didn't change
       // This is most likely not the way to do it...
-      if (!state && this.$route.path === "/afmib") {
+      if (!state && this.$route.path === "/addmapbulk") {
         this.$router.push("/")
       }
     },
@@ -227,8 +229,8 @@ export default {
     if (this.$route.path === "/om") {
       this.showFAQ = true
     }
-    if (this.$route.path === "/afmib") {
-      this.showAfmib = true
+    if (this.$route.path === "/addmapbulk") {
+      this.showAddMapBulk = true
     }
 
     /* Hack around unintended effects of using 100vh in some mobile browser, see

@@ -28,8 +28,8 @@
           >.
         </p>
         <p>
-          Fruktkartan är byggd med Vue/Vuetify samt Leaflet med Open Street Maps
-          kartor. Källkoden är fri, <em>copyleft</em> och licensierad med
+          The fruit map is built with Vue/Vuetify and Leaflet with Open Street Maps
+           maps. The source code is free, <em>copyleft</em> and licensed with
           <a
             href="https://www.gnu.org/licenses/agpl-3.0.html"
             target="_blank"
@@ -55,7 +55,7 @@
         </small>
       </v-card-text>
       <v-card-actions>
-        <v-btn @click.stop="close"> Stäng </v-btn>
+        <v-btn @click.stop="close"> Close </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
