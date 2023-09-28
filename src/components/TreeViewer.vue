@@ -3,16 +3,16 @@
 <template>
   <v-card :loading="loading">
     <v-card-text v-if="preview">
-      <div class="pt-4">FÖRHANDSGRANSKNING</div>
+      <div class="pt-4">PRIOR REVIEW</div>
       <div>
         <small>
           <em>
-            Ditt bidrag licenseras med
+            Your contribution is licensed with
             <a
               href="https://opendatacommons.org/licenses/odbl/summary/"
               target="_blank"
               >Open Database License</a
-            >, bilder med
+            >, pictures with
             <a
               href="https://creativecommons.org/publicdomain/zero/1.0/deed.sv"
               target="_blank"
@@ -26,15 +26,15 @@
     <v-card-text>
       <p>
         <small>
-          <em>Uppdaterat den {{ prettyDate(date) }}</em>
+          <em>Updated it {{ prettyDate(date) }}</em>
           <br />
-          <v-icon alt="Koordinater" x-small class="mr-1">
+          <v-icon alt="Coordinates" x-small class="mr-1">
             {{ mdiMapMarker }}
           </v-icon>
           <var>
             <a
               :href="geoURI"
-              title="Visa i separat karta"
+              title="Show in separate map"
               target="_blank"
               rel="noopener"
             >
@@ -46,7 +46,7 @@
       <p class="description">
         {{ tree.desc ? tree.desc.trim() : "" }}
       </p>
-      <TreeImage :image="tree.file" alt="Bild av trädet" />
+      <TreeImage :image="tree.file" alt="Picture of the tree" />
     </v-card-text>
     <v-card-actions>
       <slot name="buttons" />

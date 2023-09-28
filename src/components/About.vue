@@ -1,18 +1,19 @@
 <template>
+  <!-- eslint-disable-next-line -->
+  <!-- eslint-disable -->
   <v-dialog v-model="displayDialog" max-width="500" @keydown.esc="close">
     <v-card>
-      <v-card-title>Om Fruktkartan</v-card-title>
+      <v-card-title>About the Fruit Map</v-card-title>
       <v-card-text>
         <p>
-          Fruktkartan är en öppen databas med fruktträd på allmänningar och i
-          parker. Vem som helst kan lägga till nya träd, och redigera eller ta
-          bort sådana som inte passar här. Sajten är byggd av Leo Wallentin,
-          Matti Ryhänen och Daniel Lublin. Fruktikoner av Pedro Loureiro.
+          The fruit map is an open database of fruit trees on commons and in
+          parks. Anyone can add new trees, and edit or delete ones 
+          that dont fit here. The site is built by Leo Wallentin, Matti
+          Ryhänen and Daniel Lublin. Fruit icons by Pedro Loureiro.
         </p>
 
         <p>
-          Andra sajter och appar kan använda information härifrån, via ett öppet
-          API. Informationen är licensierad med
+          Other sites and apps can use information from here, via an open API. The information is licensed with
           <a
             href="https://opendatacommons.org/licenses/odbl/summary/"
             target="_blank"

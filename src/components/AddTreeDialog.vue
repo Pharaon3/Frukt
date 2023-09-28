@@ -1,11 +1,11 @@
 <template>
   <v-dialog v-model="displayDialog" max-width="500" persistent>
     <TreeEditor v-if="step === 'edit'" v-model="tree">
-      <template #title> Lägg till träd </template>
+      <template #title> Add trees </template>
       <template #buttons>
         <v-row dense>
           <v-col>
-            <v-btn @click="$emit('input', false)"> Tillbaka </v-btn>
+            <v-btn @click="$emit('input', false)"> Back </v-btn>
           </v-col>
           <v-col>
             <v-btn
@@ -13,7 +13,7 @@
               :disabled="!tree.valid"
               @click="step = 'preview'"
             >
-              Fortsätt
+              continue
             </v-btn>
           </v-col>
           <v-spacer />
@@ -24,7 +24,7 @@
                 $emit('abort')
               "
             >
-              Avbryt
+              Cancel
             </v-btn>
           </v-col>
         </v-row>
@@ -39,10 +39,10 @@
       <template #buttons>
         <v-row dense>
           <v-col>
-            <v-btn @click="step = 'edit'"> Tillbaka </v-btn>
+            <v-btn @click="step = 'edit'"> Back </v-btn>
           </v-col>
           <v-col>
-            <v-btn color="green" @click="addTree"> Publicera </v-btn>
+            <v-btn color="green" @click="addTree"> Publish </v-btn>
           </v-col>
           <v-spacer />
           <v-col>
@@ -53,7 +53,7 @@
                 $emit('abort')
               "
             >
-              Avbryt
+              Cancel
             </v-btn>
           </v-col>
         </v-row>
@@ -119,9 +119,9 @@ export default {
         })
         .catch(err => {
           const msg =
-            "Vi lyckades inte spara trädet just nu: " +
+            "We were unable to save the tree at this time: " +
             err +
-            "\nFörsök gärna igen om en stund!"
+            "\nPlease try again in a while!"
           this.$emit("error", msg)
         })
     },

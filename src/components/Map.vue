@@ -5,12 +5,12 @@
       :timeout="-1"
       style="z-index: 4"
     >
-      Dra markören till rätt plats.
+      Drag the cursor to the correct location.
       <template #action="{ attrs }">
         <v-btn text v-bind="attrs" color="green" @click.stop="addTree = true">
-          Fortsätt
+          continue
         </v-btn>
-        <v-btn text v-bind="attrs" @click="removeAddTreeMarker"> Avbryt </v-btn>
+        <v-btn text v-bind="attrs" @click="removeAddTreeMarker"> Cancel </v-btn>
       </template>
     </v-snackbar>
     <v-snackbar
@@ -22,7 +22,7 @@
       {{ errorMessage.msg }}
       <template #action="{ attrs }">
         <v-btn text v-bind="attrs" @click="errorMessage.visible = false">
-          Stäng
+          Close
         </v-btn>
       </template>
     </v-snackbar>
@@ -86,6 +86,7 @@
         @tree-loaded="adjustMapToTree"
         @error="showErrorMessage"
         @info="showInfoMessage"
+        :isAdmin="isAdmin"
       />
 
       <AddTreeDialog
@@ -142,6 +143,11 @@ export default {
         }
       },
     },
+    isAdmin: Number,
+    // isAdmin: {
+    //   type: Number,
+    //   default: 0,
+    // },
   },
   data() {
     return {
@@ -330,17 +336,17 @@ export default {
           let msg
           if (typeof e === "undefined") {
             // Interface not available.
-            msg = "Din webbläsare har inte stöd för att hämta position"
+            msg = "Your browser does not support location retrieval"
             this.canGeoLocate = false
           } else if (e.code == e.PERMISSION_DENIED) {
             // Interface is available, but has been blocked.
             msg =
-              "Dina webbläsarinställningar låter oss inte hämta din position."
+              "Your browser settings do not allow us to retrieve your location."
           } else if (e.code == e.POSITION_UNAVAILABLE) {
             // Interface is available, but position is not.
-            msg = "Vi kunde inte hämta din position just nu."
+            msg = "We could not retrieve your location at this time."
           } else {
-            msg = `Vi kunde inte hämta din position: ${e.message}`
+            msg = `We could not retrieve your location: ${e.message}`
           }
 
           if (manually) {
@@ -435,7 +441,7 @@ export default {
         })
         .catch(e => {
           this.showErrorMessage(
-            `Vi lyckades inte hämta några träd just nu: ${e}`
+            `We were unable to retrieve any trees at this time: ${e}`
           )
         })
         .finally(() => {

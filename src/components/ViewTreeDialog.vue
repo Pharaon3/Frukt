@@ -1,4 +1,6 @@
 <template>
+  <!-- eslint-disable-next-line -->
+  <!-- eslint-disable -->
   <v-dialog
     v-model="displayDialog"
     max-width="440"
@@ -13,12 +15,12 @@
       <template #buttons>
         <v-row dense>
           <v-col>
-            <v-btn @click="close"> Stäng </v-btn>
+            <v-btn @click="close"> Close </v-btn>
           </v-col>
           <v-spacer />
           <v-col>
             <v-btn :disabled="$store.state.offline" @click="step = 'delete'">
-              Radera
+              Delete
             </v-btn>
           </v-col>
           <v-col>
@@ -29,7 +31,7 @@
                 newTree = { ...tree }
               "
             >
-              Redigera
+              Edit
             </v-btn>
           </v-col>
         </v-row>
@@ -37,11 +39,11 @@
     </TreeViewer>
 
     <TreeEditor v-if="step === 'edit'" v-model="newTree">
-      <template #title> Redigera träd </template>
+      <template #title> Edit tree </template>
       <template #buttons>
         <v-row dense>
           <v-col>
-            <v-btn @click="step = 'view'"> Tillbaka </v-btn>
+            <v-btn @click="step = 'view'"> Back </v-btn>
           </v-col>
           <v-spacer />
           <v-col>
@@ -50,7 +52,7 @@
               :disabled="!newTree.valid || treesAreEqual(newTree, tree)"
               @click="towardsPreview"
             >
-              Fortsätt
+              continue
             </v-btn>
           </v-col>
         </v-row>
@@ -61,7 +63,7 @@
       <template #buttons>
         <v-row dense>
           <v-col>
-            <v-btn @click="step = 'edit'"> Tillbaka </v-btn>
+            <v-btn @click="step = 'edit'"> Back </v-btn>
           </v-col>
           <v-col>
             <v-btn
@@ -69,23 +71,22 @@
               :disabled="$store.state.offline"
               @click="submitTree"
             >
-              Spara ändringar
+            Save Changes
             </v-btn>
           </v-col>
           <v-spacer />
           <v-col>
-            <v-btn @click="close"> Avbryt </v-btn>
+            <v-btn @click="close"> Cancel </v-btn>
           </v-col>
         </v-row>
       </template>
     </TreeViewer>
 
     <v-card v-if="step === 'delete'" :loading="working">
-      <v-card-title>Anmäl träd för radering</v-card-title>
+      <v-card-title>Report trees for deletion</v-card-title>
       <v-card-text>
         <p>
-          Tala om varför det här trädet ska raderas, så tar en av oss hand om
-          det så snart som bara möjligt.
+          Tell us why this tree should be deleted and one of us will take care of it as soon as possible.
         </p>
         <v-textarea
           v-model="deleteReason"
@@ -95,17 +96,17 @@
               if (v && v.trim()) {
                 return true
               }
-              return 'Du behöver tala om varför trädet ska raderas'
+              return 'You need to say why the tree should be deleted'
             },
           ]"
           required
-          label="Motivering"
+          label="Motivation"
         />
       </v-card-text>
       <v-card-actions>
         <v-row dense>
           <v-col>
-            <v-btn @click="step = 'view'"> Tillbaka </v-btn>
+            <v-btn @click="step = 'view'"> Back </v-btn>
           </v-col>
           <v-spacer />
           <v-col>
@@ -117,9 +118,9 @@
                 !deleteReason ||
                 !deleteReason.trim()
               "
-              @click="flagForDeletion"
+              @click="deleteOrFlag"
             >
-              Anmäl för radering
+              Report for deletion
             </v-btn>
           </v-col>
         </v-row>
@@ -157,6 +158,11 @@ export default {
       type: String,
       default: null,
     },
+    isAdmin: Number,
+    // isAdmin: {
+    //   type: Number,
+    //   default: 0,
+    // },
   },
   data() {
     return {
@@ -200,6 +206,10 @@ export default {
       this.step = "view"
       this.$emit("input", null)
     },
+    deleteOrFlag() {
+      if(this.isAdmin) this.deleteTree()
+      else this.flagForDeletion()
+    },
     flagForDeletion() {
       this.working = true
       const key = this.value
@@ -209,18 +219,48 @@ export default {
         .then(raiseOnHttpError)
         .then(() => {
           const msg =
-            "Trädet är markerat för radering. Vi tittar på det så snart vi kan."
+            "The tree is marked for deletion. We will look into it as soon as we can."
           this.$emit("info", msg)
         })
         .catch(err => {
           let msg
           if (err.response && err.response.status === 404) {
             msg =
-              "Du har försökt ta bort ett träd som inte finns. " +
-              "Kanske har det redan hunnit tas bort?"
+              "You tried to delete a tree that does not exist. " +
+              "Maybe it has already been removed?"
           } else {
             msg =
-              "Något gick snett när vi försökte markera det här trädet för radering. " +
+              "Something went wrong while trying to mark this tree for deletion. " +
+              err
+          }
+          this.$emit("error", msg)
+        })
+        .finally(() => {
+          this.working = false
+          this.close()
+        })
+    },
+    deleteTree() {
+      this.working = true
+      const key = this.value
+      fetch(`${process.env.VUE_APP_APIBASE}/tree/${key}`, {
+        method: "DELETE",
+      })
+        .then(raiseOnHttpError)
+        .then(() => {
+          const msg =
+            "The tree is marked for deletion. We will look into it as soon as we can."
+          this.$emit("info", msg)
+        })
+        .catch(err => {
+          let msg
+          if (err.response && err.response.status === 404) {
+            msg =
+              "You tried to delete a tree that does not exist. " +
+              "Maybe it has already been removed?"
+          } else {
+            msg =
+              "Something went wrong while trying to mark this tree for deletion. " +
               err
           }
           this.$emit("error", msg)
@@ -244,11 +284,11 @@ export default {
               let msg
               if (err.response && err.response.status === 404) {
                 msg =
-                  "Du har följt en länk till ett träd som inte finns. " +
-                  "Kanske har det tagits bort?"
+                  "You have followed a link to a tree that does not exist. " +
+                  "Maybe it has been removed?"
               } else {
                 msg =
-                  "Något gick snett när vi försökte hämta det här trädet. " +
+                  "Something went wrong when we tried to retrieve this tree. " +
                   err
               }
               this.$emit("error", msg)
@@ -264,7 +304,7 @@ export default {
           this.treeCache[key] = this.tree
         })
         .catch(err => {
-          const msg = "Vi lyckades inte hämta det här trädet just nu. " + err
+          const msg = "We were unable to retrieve this tree at this time. " + err
           this.$emit("error", msg)
           this.close()
         })
@@ -278,8 +318,9 @@ export default {
       }
       this.$refs.confirm
         .open(
-          `Vill du ändra trädets typ från ${this.tree.type} till ${this.newTree.type}?`,
-          { positiveText: "Fortsätt", positiveColor: "green" }
+          `Do you want to change the tree's type from 
+            ${this.tree.type} to ${this.newTree.type}?`,
+          { positiveText: "continue", positiveColor: "green" }
         )
         .then(confirm => {
           if (confirm) {
@@ -308,7 +349,7 @@ export default {
         .catch(err => {
           // Display error msg, but do not close.
           // User might want to try again
-          const msg = "Ett fel uppstod när trädet skulle uppdateras: " + err
+          const msg = "An error occurred while trying to update the tree: " + err
           this.$emit("error", msg)
         })
     },

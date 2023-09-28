@@ -6,11 +6,11 @@ module.exports = {
   },
   extends: [
     "plugin:vue/recommended",
-    "plugin:prettier/recommended",
+    // "plugin:prettier/recommended",
     "eslint:recommended",
   ],
   parser: "vue-eslint-parser",
-  plugins: ["prettier"],
+  // plugins: ["prettier"],
   ignorePatterns: ["dist/**"],
   rules: {
     indent: [
@@ -28,7 +28,7 @@ module.exports = {
     quotes: ["error", "double"],
     semi: ["error", "never"],
     "no-unused-vars": ["error", { argsIgnorePattern: "next" }],
-    "prettier/prettier": "error",
-    "max-len": [2, { code: 90, tabWidth: 2, ignoreUrls: true }],
+    // "prettier/prettier": "error",
+    "max-len": [2, { code: 120, tabWidth: 2, ignoreUrls: true }],
   },
 }

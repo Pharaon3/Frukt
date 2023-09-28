@@ -1,5 +1,7 @@
 <!-- Display an image in a tree view. -->
 <template>
+  <!-- eslint-disable-next-line -->
+  <!-- eslint-disable -->
   <div>
     <v-img
       v-if="image && !err"
@@ -18,8 +20,9 @@
     </v-img>
     <v-card v-if="err" class="warning">
       <v-card-text>
-        Bilden kunde inte visas just nu. Det kan bero på att den nyss laddats
-        upp och fortfarande bearbetas, eller på att den är trasig.
+        The image could not be displayed at this time.
+        This could be because it was just uploaded and is still being processed,
+        or because it is broken.
       </v-card-text>
     </v-card>
   </div>

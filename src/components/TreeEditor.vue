@@ -8,46 +8,46 @@
     </v-card-title>
     <v-card-text>
       <v-form v-model="tree_.valid" @input="$emit('input', tree_)">
-        <v-select v-model="tree_.type" required :rules="[v => !!v || 'Du måste ange en trädsort']"
-          :items="insertableTrees" label="Trädsort" />
+        <v-select v-model="tree_.type" required :rules="[v => !!v || 'You must specify a tree variety']"
+          :items="insertableTrees" label="Tree variety" />
         <div>
-          <v-img v-if="file" :src="previewSource" height="194" alt="Ny bild" />
-          <TreeImage v-else :image="tree_.image" alt="Nuvarande bild" />
+          <v-img v-if="file" :src="previewSource" height="194" alt="New picture" />
+          <TreeImage v-else :image="tree_.image" alt="Current image" />
         </div>
         <div v-if="tree_.file && !file">
           <v-btn small class="px-2 mt-1" color="red lighten-3" @click="deleteImage">
-            <v-icon>{{ mdiDeleteOutline }}</v-icon>Ta bort bilden
+            <v-icon>{{ mdiDeleteOutline }}</v-icon>Remove the image
           </v-btn>
         </div>
-        <v-file-input v-model="file" accept="image/*" label="Ladda upp en bild" @change="fileChanged" />
+        <v-file-input v-model="file" accept="image/*" label="Upload a picture" @change="fileChanged" />
         <v-progress-linear :active="uploading" :value="uploadingProgress" :striped="true" />
         <v-text-field v-model="tree_.username" label="Name" :rules="[
           v => {
             if (v && v.trim()) {
               return true
             }
-            return 'Skriv inn navnet ditt før du fortsetter.'
+            return 'Please enter your name before continuing.'
           },
         ]" required></v-text-field>
         <v-text-field v-model="tree_.phone" label="Phone Number" :rules="[
-          v => !!v || 'Skriv inn telefonnummeret ditt før du fortsetter',
-          v => /^[0-9]{10}$/.test(v) || 'Ugyldig telefonnummer. Vennligst sjekk igjen.',
+          v => !!v || 'Please enter your phone number before continuing',
+          v => /^[0-9]{10}$/.test(v) || 'Invalid phone number. Please check again.',
         ]" required></v-text-field>
         <v-text-field v-model="tree_.email" label="Email" :rules="[
-          v => !!v || 'Skriv inn e-postadressen din før du fortsetter.',
-          v => /.+@.+\..+/.test(v) || 'Ugyldig e-postadresse. Vennligst sjekk igjen.',
+          v => !!v || 'Please enter your email address before continuing.',
+          v => /.+@.+\..+/.test(v) || 'Invalid E-mail address. Please check again.',
         ]" required></v-text-field>
         <p v-if="file">
-          Bildens rotation kan vara fel här, men bör bli rätt i nästa steg.
+          The rotation of the image may be wrong here, but should be correct in the next step.
         </p>
         <v-textarea v-model="tree_.desc" :rules="[
           v => {
             if (v && v.trim()) {
               return true
             }
-            return 'Beskriv trädet innan du fortsätter'
+            return 'Describe the tree before continuing'
           },
-        ]" required label="Beskrivning" />
+        ]" required label="Description" />
       </v-form>
     </v-card-text>
     <v-card-actions>
@@ -117,7 +117,7 @@ export default {
   methods: {
     deleteImage() {
       this.$refs.confirm
-        .open("Är du säker på att du vill ta bort bilden?")
+        .open("Are you sure you want to delete the image?")
         .then(confirm => {
           if (confirm) {
             this.tree_.file = null
@@ -139,47 +139,47 @@ export default {
         }
       }
       this.uploading = true
-      fetch(`${process.env.VUE_APP_APIBASE}/sign`, {
-        method: "POST",
-        body: JSON.stringify({ "file-name": this.file.name }),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then(response => response.json())
-        .then(response => {
-          // Rename file. File.name is readonly in most environs
-          // Creating a new file object works, except for IE and some Opera versions
-          let renamedFile = new File([this.file], response.filename, {
-            type: this.file.type,
-          })
-          let request = new XMLHttpRequest()
-          request.open("PUT", response.signedRequest)
-          request.upload.addEventListener("progress", e => {
-            this.uploadingProgress = (e.loaded / e.total) * 100
-          })
-          request.onreadystatechange = () => {
-            if (request.readyState === 4) {
-              this.uploading = false
-              this.uploadingProgress = 0
-              if (request.status === 200) {
-                this.uploadOk = true
-                // pass
-              } else {
-                // FIXME error reporting
-                this.uploadOk = false
-                console.log("Error uploading:", request.status)
-              }
-            }
-          }
-          request.send(renamedFile)
-          this.tree_.file = response.filename
-        })
-        .catch(err => {
-          // FIXME error reporting
-          console.log("Error getting upload signature", err)
-          this.uploading = false
-          this.uploadingProgress = 0
-          this.uploadOk = false
-        })
+      // fetch(`${process.env.VUE_APP_APIBASE}/sign`, {
+      //   method: "POST",
+      //   body: JSON.stringify({ "file-name": this.file.name }),
+      //   headers: { "Content-Type": "application/json" },
+      // })
+      //   .then(response => response.json())
+      //   .then(response => {
+      //     // Rename file. File.name is readonly in most environs
+      //     // Creating a new file object works, except for IE and some Opera versions
+      //     let renamedFile = new File([this.file], response.filename, {
+      //       type: this.file.type,
+      //     })
+      //     let request = new XMLHttpRequest()
+      //     request.open("PUT", response.signedRequest)
+      //     request.upload.addEventListener("progress", e => {
+      //       this.uploadingProgress = (e.loaded / e.total) * 100
+      //     })
+      //     request.onreadystatechange = () => {
+      //       if (request.readyState === 4) {
+      //         this.uploading = false
+      //         this.uploadingProgress = 0
+      //         if (request.status === 200) {
+      //           this.uploadOk = true
+      //           // pass
+      //         } else {
+      //           // FIXME error reporting
+      //           this.uploadOk = false
+      //           console.log("Error uploading:", request.status)
+      //         }
+      //       }
+      //     }
+      //     request.send(renamedFile)
+      //     this.tree_.file = response.filename
+      //   })
+      //   .catch(err => {
+      //     // FIXME error reporting
+      //     console.log("Error getting upload signature", err)
+      //     this.uploading = false
+      //     this.uploadingProgress = 0
+      //     this.uploadOk = false
+      //   })
     },
   },
 }

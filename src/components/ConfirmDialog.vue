@@ -10,14 +10,14 @@
           {{ message }}
         </p>
         <p>
-          Skriv då <code>ja</code> nedan och tryck
+          Then write <code>and</code> below and press
           <code>{{ options.positiveText }}</code
           >.
         </p>
-        <v-text-field v-model="confirm" label="skriv här" />
+        <v-text-field v-model="confirm" label="write here" />
       </v-card-text>
       <v-card-actions class="pt-0">
-        <v-btn small @click.native="negative"> Nej </v-btn>
+        <v-btn small @click.native="negative"> No </v-btn>
         <v-spacer />
         <v-btn
           small
@@ -42,7 +42,7 @@ export default {
     message: null,
     defaultOptions: {
       width: 350,
-      positiveText: "Ta bort",
+      positiveText: "Remove",
       positiveColor: "red lighten-3",
     },
     options: {},
