@@ -241,10 +241,10 @@ export default {
       return licon({
         iconSize: [42, 36],
         iconAnchor: [21, 34],
-        iconUrl: require(`./icons/${filename}.svg`),
+        iconUrl: require(`./ico/${filename}.svg`),
         // Shadow is included in icon svg, but for some reason Leaflet
         // insists on loading a specific shadow when adding a tree.
-        shadowUrl: filename === "addnew" ? require("./icons/addnew.svg") : null,
+        shadowUrl: filename === "addnew" ? require("./ico/addnew.svg") : null,
         shadowSize: [0, 0],
       })
     }
@@ -254,7 +254,7 @@ export default {
         o[k] = v
         return o
       }, {})
-
+    console.log("icons: ", this.icons)
     this.canGeoLocate = navigator.geolocation ? true : false
   },
 
@@ -462,7 +462,7 @@ export default {
 .marker-cluster-small div,
 .marker-cluster-medium div,
 .marker-cluster-large div {
-  background-color: rgba(230, 180, 43, 0.4) !important;
+  background-color: rgba(113, 204, 51, 0.4) !important;
 }
 
 @media (min-width: 600px) {

@@ -7,13 +7,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lint-fix": "vue-cli-service lint --fix",
-    "prebuild": "./build-vars"
+    "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "@mdi/js": "7.2.96",
     "core-js": "3.32.0",
     "leaflet": "1.8.0",
+    "papaparse": "^5.4.1",
     "register-service-worker": "1.7.2",
     "vue-router": "3.5.4",
     "vue2-leaflet": "2.7.1",

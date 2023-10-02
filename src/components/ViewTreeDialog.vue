@@ -207,7 +207,7 @@ export default {
       this.$emit("input", null)
     },
     deleteOrFlag() {
-      if(this.isAdmin) this.deleteTree()
+      if(this.isAdmin > 0) this.deleteTree()
       else this.flagForDeletion()
     },
     flagForDeletion() {
@@ -334,6 +334,7 @@ export default {
       let treePayload = this.newTree
       treePayload.type = treePayload.type.trim()
       treePayload.desc = treePayload.desc.trim()
+      console.log("process.env.VUE_APP_APIBASE: ", process.env.VUE_APP_APIBASE)
       fetch(`${process.env.VUE_APP_APIBASE}/tree/${this.value}`, {
         method: "POST",
         body: JSON.stringify(treePayload),

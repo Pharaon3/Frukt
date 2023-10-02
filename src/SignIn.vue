@@ -36,7 +36,7 @@ export default {
   components: {
   },
   props: {
-    setAdmin: Function,
+    setAccess: Function,
   },
   data() {
     return {
@@ -75,9 +75,11 @@ export default {
         .then((data) => {
           // Handle the JSON data returned by the server
           console.log("Response data:", data)
-          if(data.result == "true") {
+          console.log("Response data.result:", data.result)
+          if(data.result === "true" || data.result === true) {
+            console.log("data.res: ", data.res)
             document.getElementById("signin").style.display = "none"
-            this.setAdmin(data.result.access)
+            this.setAccess(data.res.access)
           } else {
             document.getElementById("signin").style.display = "none"
             document.getElementById("signup").style.display = "flex"

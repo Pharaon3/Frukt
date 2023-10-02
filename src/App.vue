@@ -20,7 +20,10 @@ export default {
   },
   data() {
     return {
-      isAdmin: Number,
+      isAdmin: {
+        type: Number,
+        default: 0,
+      }
     }
   },
   methods: {

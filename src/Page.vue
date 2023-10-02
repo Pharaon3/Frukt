@@ -56,15 +56,15 @@
         >
           Add trees
         </SidebarItem>
-        <SidebarItem :icon="mdiInformation" :active="showFAQ" to="/om">
-          About the Fruit Map
-        </SidebarItem>
         <SidebarItem :icon="mdiImagePlus" :active="showAddMapBulk" to="/addmapbulk">
           Add Fruit Map in Bulk
         </SidebarItem>
       </v-list>
       <template #append>
         <v-list class="d-none d-lg-block">
+          <SidebarItem :icon="mdiInformation" :active="showFAQ" to="/om">
+            About the Fruit Map
+          </SidebarItem>
           <v-list-item @click="miniVariant = !miniVariant">
             <v-list-item-icon>
               <v-icon v-if="!miniVariant">
@@ -172,7 +172,7 @@ export default {
     console: () => console, // For debugging
     selectedTreeIcon() {
       let tree = this.filters.type === "*" ? "tree" : this.filters.type
-      return require(`./components/icons/${tree}.svg`)
+      return require(`./components/ico/${tree}.svg`)
     },
     selectedTreeName() {
       let treeKey = this.filters.type
@@ -298,7 +298,7 @@ html {
   float: right;
   padding: 0.25em;
   color: black;
-  background-color: rgba(112, 206, 155, 0.85);
+  background-color: #6db6e1;
   border-radius: 50%;
 }
 

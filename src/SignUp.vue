@@ -24,6 +24,8 @@
           <v-card-actions class="pt-0">
             <v-btn small @click="handleSignUp"> Sign Up </v-btn>
             <v-spacer />
+            <v-btn small @click="gotoSignIn"> Go to Sign In </v-btn>
+            <v-spacer />
             <v-btn small @click="cancelSignUp">
               Cancel
             </v-btn>
@@ -97,6 +99,13 @@ export default {
       this.sign.username = ""
       this.sign.email = ""
       this.sign.password = ""
+    },
+    gotoSignIn() {
+      this.sign.username = ""
+      this.sign.email = ""
+      this.sign.password = ""
+      document.getElementById("signin").style.display = "flex"
+      document.getElementById("signup").style.display = "none"
     },
     
   },
