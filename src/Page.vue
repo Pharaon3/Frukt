@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="drawer"
       :mobile-breakpoint="960"
-      :width="340"
+      :height="100"
       :mini-variant="miniVariant"
       right
       bottom
@@ -18,11 +18,12 @@
               :max-width="280"
             />
           </v-card-title>
-          <v-card-title class="hidden-md-and-down">
+          <v-card-title class="hidden-md-and-down" style="padding: 0">
             <v-img
               v-if="!miniVariant"
               alt="The fruit map"
               src="./assets/img/fruktkartan_a.png"
+              style="height: 100px; width: 140px;"
             >
               <span class="beta" :style="{ display: betaDisplay }">beta</span>
             </v-img>
@@ -31,7 +32,7 @@
         </h1>
       </v-card>
 
-      <v-list>
+      <v-list style="display: flex; flex-direction: row;">
         <SidebarItem
           :icon-img="selectedTreeIcon"
           :tooltip="`Shows ${selectedTreeName.toLowerCase()}`"
@@ -59,25 +60,10 @@
         <SidebarItem :icon="mdiImagePlus" :active="showAddMapBulk" to="/addmapbulk">
           Add Fruit Map in Bulk
         </SidebarItem>
+        <SidebarItem :icon="mdiInformation" :active="showFAQ" to="/om">
+          About the Fruit Map
+        </SidebarItem>
       </v-list>
-      <template #append>
-        <v-list class="d-none d-lg-block">
-          <SidebarItem :icon="mdiInformation" :active="showFAQ" to="/om">
-            About the Fruit Map
-          </SidebarItem>
-          <v-list-item @click="miniVariant = !miniVariant">
-            <v-list-item-icon>
-              <v-icon v-if="!miniVariant">
-                {{ mdiClose }}
-              </v-icon>
-              <v-icon v-if="miniVariant" title="Show panel">
-                {{ mdiMenuOpen }}
-              </v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>Hide the panel</v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </template>
     </v-navigation-drawer>
 
     <v-main>
@@ -310,5 +296,30 @@ html {
 /* Less whitespace on mobile */
 .v-navigation-drawer--is-mobile {
   height: auto !important;
+}
+aside {
+  width: 100vw !important;
+  display: flex !important;
+  flex-direction: row !important;
+}
+aside .v-navigation-drawer__content {
+  display: flex;
+  flex-direction: row;
+  /* width: 80%; */
+  overflow: hidden;
+}
+aside .v-navigation-drawer__content .v-card {
+  /* width: 30%; */
+}
+aside> .v-navigation-drawer__append> .d-lg-block {
+  display: flex !important;
+  flex-direction: row !important;
+}
+aside .v-card .v-image__image {
+  width: 100px;
+}
+.v-list-item__icon {
+  height: 100%;
+  margin: 0;
 }
 </style>

@@ -7,7 +7,7 @@
     @click="disabled || $emit('on-click')"
   >
     <v-list-item-icon @click="disabled || $emit('mini-action')">
-      <v-tooltip left>
+      <v-tooltip top>
         <template #activator="{ on }">
           <v-img v-if="iconImg" :src="iconImg" max-width="32" v-on="on" />
           <v-icon v-else :color="iconColor" v-on="on">
