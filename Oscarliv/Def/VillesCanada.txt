@@ -1,0 +1,239 @@
+	Abbotsford 	Colombie-Britannique 	
+	Ajax 	Ontario 	
+	Alma 	Québec 	
+	Amos 	Québec 	
+	Annapolis 	Nouvelle-Écosse 	
+	Antigonish 	Nouvelle-Écosse 	
+	Baie-Comeau 	Québec 	
+	Barrie 	Ontario 	
+	Bathurst 	Nouveau-Brunswick 	
+	Beauharnois 	Québec 	
+	Beaupré 	Québec 	
+	Bécancour 	Québec 	
+	Belleville 	Ontario 	
+	Beloeil 	Québec 	
+	Beresford 	Nouveau-Brunswick 	
+	Blainville 	Québec 
+	Boisbriand 	Québec 
+	Boischatel 	Québec 
+	Brampton 	Ontario 
+	Brandon 	Manitoba 
+	Burlington 	Ontario 
+	Burnaby 	Colombie-Britannique 
+	Caledon 	Ontario 
+	Calgary 	Alberta 
+	Cambridge 	Ontario 
+	Candiac 	Québec 
+	Cape Breton 	Nouvelle-Écosse 
+	Carleton-sur-Mer 	Québec 
+	Chambly 	Québec 
+	Charlottetown 	Île-du-Prince-Édouard (Capitale provinciale) 
+	Châteauguay 	Québec 
+	Château-Richer 	Québec 
+	Chatham-Kent 	Ontario 
+	Chester 	Nouvelle-Écosse 
+	Chibougamau 	Québec 
+	Chilliwack 	Colombie-Britannique 
+	Clarington 	Ontario 
+	Colchester 	Nouvelle-Écosse 
+	Conception Bay South 	Terre-Neuve-et-Labrador 
+	Coquitlam 	Colombie-Britannique 
+	Corner Brook 	Terre-Neuve-et-Labrador 
+	Cornwall 	Ontario 
+	Cowansville 	Québec 
+	Cumberland 	Ontario 
+	Delta 	Colombie-Britannique 
+	Deux-Montagnes 	Québec 
+	Dieppe 	Nouveau-Brunswick 
+	Dolbeau-Mistassini 	Québec 
+	Drummondville 	Québec 
+	East Hants 	Nouvelle-Écosse 
+	Edmonton 	Alberta (Capitale provinciale) 
+	Edmundston 	Nouveau-Brunswick 
+	Embrun 	Ontario 
+	Estevan 	Saskatchewan 
+	Fredericton 	Nouveau-Brunswick (Capitale provinciale) 
+	Fort McMurray 	Alberta 
+	Municipalité 	Province 
+	Gatineau 	Québec 
+	Gaspé 	Québec 
+	Guelph 	Ontario 
+	Granby 	Québec 
+	Granby 	Québec 
+	Grand Falls-Windsor 	Terre-Neuve-et-Labrador 
+	Grande Prairie 	Alberta 
+	Grand Sudbury 	Ontario 
+	Halifax 	
+	(regional municipality) 	
+	(Capitale provinciale) 	359 183 hab.
+	Halton Hills 	Ontario 
+	Hamilton 	Ontario 
+	Hanover 	Manitoba 
+	Inverness 	
+	(County municipality) 	15 601 hab. 
+	Iqaluit 	Nunavut
+	(Capitale provinciale) 	
+	Joliette 	Québec 
+	Kamloops 	Colombie-Britannique 
+	Kawartha Lakes 	Ontario 
+	Kelowna 	Colombie-Britannique 
+	Kings 	Nouvelle-Écosse 
+	Kingston 	Ontario 
+	Kitchener 	Ontario 
+	Lac Bauport 	Québec 
+	Lac-Delage 	Québec 
+	L'Assomption 	Québec 
+	La Prairie 	Québec 
+	La Tuque 	Québec 
+	Lachute 	Québec 
+	L'Ancienne-Lorette 	Québec 
+	L'Ange-Gardien 	Québec 
+	Lac-Saint-Joseph 	Québec 
+	Langley 	Colombie-Britannique 
+	Langley 	Colombie-Britannique 
+	Laval 	Québec 
+	Lavaltrie 	Québec 
+	Les Îles-de-la-Madeleine 	Québec 
+	Lethbridge 	Alberta 
+	Lévis 	Québec 
+	Longueuil 	Québec 
+	London 	Ontario 
+	Lunenburg 	
+	(Municipal district) 	25 570 hab. 
+	Magog 	Québec 
+	Maple Ridge 	Colombie-Britannique 
+	Markham 	Ontario 
+	Mascouche 	Québec 
+	Matane 	Québec 
+	Medicine Hat 	Alberta 
+	Mirabel 	Québec 
+	Miramichi 	Nouveau-Brunswick 
+	Mississauga 	Ontario 
+	Moncton 	Nouveau-Brunswick 
+	Mont-Laurier 	Québec 
+	Mont-Saint-Hilaire 	Québec 
+	Montmagny 	Québec 
+	Montréal 	Québec 
+	Montréal-Est 	Québec 
+	Moose Jaw 	Saskatchewan 
+	Mount Pearl 	Terre-Neuve-et-Labrador 
+	Nanaimo 	Colombie-Britannique 
+	Newmarket 	Ontario 
+	New Westminster 	Colombie-Britannique 
+	Niagara Falls 	Ontario 
+	Nigadoo 	New-Brunswick 
+	Norfolk 	Ontario 
+	North Bay 	Ontario 
+	North Battleford 	Saskatchewan 
+	North Vancouver 	Colombie-Britannique 
+	North Vancouver 	Colombie-Britannique 
+	Oakville 	Ontario 
+	Ottawa 	Ontario
+	Capitale fédérale 	1 063 664 hab.
+	Oshawa 	Ontario 
+	Peterborough 	Ontario 
+	Pickering 	Ontario 
+	Pictou 	
+	(County municipality) 	21 788 hab. 
+	Pincourt 	Québec 
+	Portage la Prairie 	Manitoba 
+	Port Coquitlam 	Colombie-Britannique 
+	Prince Albert 	Saskatchewan 
+	Prince George 	Colombie-Britannique 
+	Québec 	Québec
+	Capitale provinciale 	717 600 hab.
+	Queens 	
+	County municipality 	11 694 hab. 
+	Quispamsis 	Nouveau-Brunswick 
+	Red Deer 	Alberta 
+	Regina 	Saskatchewan
+	Capitale provinciale 	192 800 hab.
+	Repentigny 	Québec 
+	Richmond 	Colombie-Britannique 
+	Richmond Hill 	Ontario 
+	Rimouski 	Québec 
+	Rivière-du-Loup 	Québec 
+	Roberval 	Québec 
+	Rosemère 	Québec 
+	Rouyn-Noranda 	Québec 
+	Rothesay 	Nouveau-Brunswick 
+	Riverview 	Nouveau-Brunswick 
+	Saanich 	Colombie-Britannique 
+	Saguenay 	Québec 
+	St. Albert 	Alberta 
+	St. Andrews 	
+	Rural municipality 	10 695 hab. 
+	Saint-Basile-le-Grand 	Québec 
+	Saint Catharines 	Ontario 
+	Saint-Charles-Borromée 	Québec 
+	Saint-Constant 	Québec 
+	Sainte-Eustache 	Québec 
+	Saint-Félicien 	Québec 
+	Saint-Georges 	Québec 
+	Saint-Jean 	Nouveau-Brunswick 
+	Saint-Jean 	Terre-Neuve-et-Labrador
+	Capitale provinciale 	172 918 hab.
+	Saint-Jean-sur-Richelieu 	Québec 
+	Saint-Jérôme 	Québec 
+	Saint-Hyacinthe 	Québec 
+	Saint-Lazare 	Québec 
+	Saint-Lin–Laurentides 	Québec 
+	Sainte-Anne-de-Beaupré 	Québec 
+	Sainte-Anne-des-Plaines 	Québec 
+	Saint-Augustin-de-Desmaures 	Québec 
+	Sainte-Catherine 	Québec 
+	Sainte-Catherine-de-la-Jacques-Cartier 	Québec 
+	Sainte-Brigitte-de-Laval 	Québec 
+	Saint-Ferréol-les-Neiges 	Québec 
+	Saint-Gabriel-de-Valcartier 	Québec 
+	Saint-Joachim 	Québec 
+	Sainte-Julie 	Québec 
+	Sainte-Marie 	Québec 
+	Sainte-Sophie 	Québec 
+	Saint-Tite 	Québec 
+	Saint-Tite-des-Caps 	Québec 
+	Sainte-Thérèse 	Québec 
+	Salaberry-de-Valleyfield 	Québec 
+	Sarnia 	Ontario 
+	Saskatoon 	Saskatchewan 
+	Sault Ste. Marie 	Ontario 
+	Sept-Îles 	Québec 
+	Shannon 	Québec 
+	Shawinigan 	Québec 
+	Sherbrooke 	Québec 
+	Springfield 	
+	Rural municipality 	12 602 hab. 
+	Sorel-Tracy 	Québec 
+	Stoneham-et-Tewkesbury 	Québec 
+	Strathcona County 	Alberta 
+	Summerside 	Île-du-Prince-Édouard 
+	Surrey 	Colombie-Britannique 
+	Swift Current 	Saskatchewan 
+
+	Terrebonne (Québec) ville: 85 960 hab.	
+	Thetford Mines (Québec) ville: 26 403 hab.	
+	Thompson (Manitoba) ville: 13 256 hab.	
+	Thunder Bay (Ontario) ville: 109 016 hab.	
+	Toronto (capitale provinciale de l'Ontario) ville: 3 481 494 h rm: 6 682 897 h	
+	Trois-Rivières (Québec) ville: 125 086 hab.	
+	Terrasse-Vaudreuil (Québec)	
+	Truro (Nouvelle-Écosse) ville: 11 457 hab.	
+	Val-d'Or (Québec) 31 798 hab.	
+	Vancouver (Colombie-Britannique) ville: 545 671 hab. rm: 1 986 965 h	
+	Varennes (Québec) 20 439 hab.	
+	Vaughan (Ontario) ville: 182 022 hab.	
+	Victoria (capitale provinciale de la Colombie-Britannique) ville: 74 125 h rm: 311 902 h	
+	Victoriaville (Québec) ville: 40 105 hab.	
+	Vaudreuil-Dorion (Québec) ville: 22 087 hab.	
+	Warterloo (Ontario) ville: 86 543 hab.	
+	Waterloo (Québec) ville: 4 500 hab.	
+	Welland (Ontario) ville: 48 402 hab.	
+	West Hants (Nouvelle-Écosse) municipalité de district: 13 780 hab.	
+	Westmount (Québec) banlieue cossue de Montréal : 22 395 hab.	
+	Whitby (Ontario) ville: 87 413 hab.	
+	Whitehorse (capitale territoriale du Yukon)	
+	Windsor (Ontario) ville: 208 402 h rm: 307 877 h	
+	Winnipeg (capitale provinciale du Manitoba) ville: 619 544 h rm: 671 274 h	
+	Yarmouth 	Nouvelle-Écosse 
+	Yellowknife 	Territoires du Nord-Ouest 
+	Yorkton 	Saskatchewan 

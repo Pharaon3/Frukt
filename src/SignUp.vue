@@ -81,6 +81,7 @@ export default {
           console.log("Response data:", data)
           if(data.result == "true") {
             document.getElementById("signup").style.display = "none"
+            document.getElementById("page").style.display = "block"
           } else {
             this.sign.username = ""
             this.sign.email = ""

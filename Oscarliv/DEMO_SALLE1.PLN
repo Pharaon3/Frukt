@@ -1,0 +1,94 @@
+DECOR 001	584	158	16	516	bar_01.gif	0						0,00	 	 
+DECOR 002	571	441	449	16	bar_01.gif	0						0,00
+DECOR 042	601	458	416	287	pelouse1.gif	0						0,00	 	 
+DECOR 003	105	665	22	32	porte2.gif	0						0,00	 		 
+DECOR 004	580	120	21	37	escalier3.gif	0						0,00	 	 
+DECOR 005	578	665	21	35	escalier4.gif	0						0,00	 	 
+DECOR 006	531	117	39	16	exit1.gif	0						0,00	 	 
+DECOR 007	524	682	39	16	exit1.gif	0						0,00	 	 
+DECOR 008	976	222	39	16	exit1.gif	0						0,00	 	 
+DECOR 009	995	119	22	34	extint1.gif	0						0,00	 	 
+DECOR 010	564	431	22	34	extint1.gif	0						0,00 	 
+DECOR 011	-4	414	75	5	bar_06.gif	0						0,00	 	 
+DECOR 012	-5	466	75	5	bar_06.gif	0						0,00		 
+DECOR 013	69	416	14	15	bar_08.gif	0						0,00	 	 
+DECOR 014	67	454	14	15	bar_09.gif	0						0,00	 
+DECOR 015	5	422	21	31	chef.gif	0						0,00	 	 
+DECOR 016	-2	475	50	26	portemanteau1.gif	0						0,00
+DECOR 017	0	508	43	68	table_bebe1.gif	0						0,00	 	 	 	 
+DECOR 018	8	567	26	39	comptoir1.gif	0						0,00	 	
+DECOR 019	-6	618	48	5	bar_06.gif	0						0,00	 
+DECOR 020	41	621	5	82	bar_07.gif	0						0,00	 	 	 
+DECOR 021	1	630	30	22	plan_wc1.gif	0						0,00	 	 
+DECOR 022	3	668	27	30	lavabo1gif.gif	0						0,00	 	 
+DECOR 023	521	255	59	50	aquarium1.gif	0						0,00	 	 
+DECOR 024	112	417	36	35	plante2.gif	0						0,00	 	 
+DECOR 025	291	417	36	35	plante2.gif	0						0,00	 	 
+DECOR 026	466	417	36	35	plante2.gif	0						0,00	 	 
+DECOR 027	488	565	94	64	buffet1.gif	0						0,00	 	 
+DECOR 028	594	118	191	41	bar_03.gif	0						0,00	 	 
+DECOR 029	613	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 030	643	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 031	674	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 032	704	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 033	734	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 034	762	159	28	28	bar_tabouret1.gif	0						0,00	 	 
+DECOR 035	783	114	75	22	tele1.gif	0						0,00	 	 
+DECOR 036	880	118	95	46	billard1.gif	0						0,00	 	 
+DECOR 037	973	172	44	44	canapeang_p3.gif	0						0,00	 	 
+DECOR 038	994	154	23	18	canapeang_pp4.gif	0						0,00	 	 
+DECOR 039	962	164	25	23	table01.gif	0						0,00	 	 
+DECOR 040	601	224	123	135	pistedanse1.gif	0						0,00	
+DECOR 041	599	380	40	60	piano1.gif	0						0,00	 	  	 
+DECOR 043	934	455	78	64	enfant_chateau.gif	0						0,00	 	 
+DECOR 044	812	598	199	97	piscine1.gif	0						0,00	 	 	 	 	 
+TABLE 001	113	182	71	60		0						0,00	 	 
+TABLE 002	197	182	71	60		0						0,00	 	 
+TABLE 003	274	182	71	60		0						0,00	 	 
+TABLE 004	353	182	71	60		0						0,00	 	 
+TABLE 005	430	182	71	60		0						0,00	 	 
+TABLE 006	508	182	71	60		0						0,00	 	 
+TABLE 007	112	275	71	60		0						0,00	 	 
+TABLE 008	192	275	71	60		0						0,00	 	 
+TABLE 009	271	275	71	60		0						0,00	 	 
+TABLE 010	351	275	71	60		0						0,00	 	 
+TABLE 011	438	275	71	60		0						0,00	 	 
+TABLE 012	110	352	71	60		0						0,00	 	 
+TABLE 013	192	352	71	60		0						0,00	 	 
+TABLE 014	276	352	71	60		0						0,00	 	 
+TABLE 015	358	352	71	60		0						0,00	 	 
+TABLE 016	443	352	71	60		0						0,00	 	 
+TABLE 017	111	485	71	60		0						0,00	 	 
+TABLE 018	200	485	71	60		0						0,00	 	 
+TABLE 019	289	485	71	60		0						0,00	 	 
+TABLE 020	371	485	71	60		0						0,00	 	 
+TABLE 021	452	485	71	60		0						0,00	 	 
+TABLE 022	110	555	71	60		0						0,00	 	 
+TABLE 023	200	555	71	60		0						0,00	 	 
+TABLE 024	292	555	71	60		0						0,00	 	 
+TABLE 025	375	555	71	60		0						0,00	 	 
+TABLE 026	202	637	162	60		1						0,00	 	 
+TABLE 027	377	637	71	60		0						0,00	 	 
+TABLE 028	8	177	71	99		1						0,00	 	 
+TABLE 029	2	281	71	112		1						0,00	 	 
+TABLE 030	724	250	71	60		1						0,00	 	 
+TABLE 031	796	252	71	60		1						0,00	 	 
+TABLE 032	870	251	71	60		1						0,00	 	 
+TABLE 033	942	246	71	60		1						0,00	 	 
+TABLE 034	728	313	71	60		1						0,00	 	 
+TABLE 035	802	314	71	60		1						0,00	 	 
+TABLE 036	871	313	71	60		1						0,00	 	 
+TABLE 037	944	310	71	60		1						0,00	 	 
+TABLE 038	728	376	71	60		1						0,00	 	 
+TABLE 039	800	376	71	60		1						0,00	 	 
+TABLE 040	873	375	71	60		1						0,00	 	 
+TABLE 041	945	373	71	60		1						0,00	 	 
+TABLE 042	612	508	71	60		0						0,00	 	 
+TABLE 043	688	507	71	60		0						0,00	 	 
+TABLE 044	788	529	71	60		0						0,00	 	 
+TABLE 045	863	528	71	60		0						0,00	 	 
+TABLE 046	940	528	71	60		0						0,00	 	 
+TABLE 047	612	571	71	60		0						0,00	 	 
+TABLE 048	689	571	71	60		0						0,00	 	 
+TABLE 049	612	635	71	60		0						0,00	 	 
+TABLE 050	689	635	71	60		0						0,00	 	 

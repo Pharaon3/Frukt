@@ -1,0 +1,123 @@
+CE DOCUMENT EST DESTINE AU WEBMASTER QUI S OCCUPE DE VOTE SITE INTERNET
+
+FORMAT DU FICHIER fichiers_de_base.txt
+
+Le fichier contient :
+1>Les familles des articles
+2>Les sous-familles des articles
+3>Les articles
+4>Les rues 
+5>Le Personnel(Livreurs,
+6>Les clients
+
+COMMENT EST STRUCTURE LE FICHIER:
+
+Chaque ligne du fichier commence par un caractères spéciale
+pour la differencier :
+
+
+*  	: C'est une ligne FAMILLE
+#  	: C'est une ligne SOUS-FAMILLE
++	: C'est une ligne PRODUIT
+&	: C'est une ligne RUE
+£	: C'est une ligne LIVREUR
+$	: C'est une ligne CLIENT
+#	: C'est une ligne TELEXCLU
+
+Exemple:
+
+*	APERITIFS	001	9
+*	BOISSONS	010	8
+*	CAFE		009	11
+*	COMPOSANTS	015	4
+*	DESSERTS	008	20
+*	DIVERS		016	2
+*	GRATINES	005	8
+*	PATES		004	20
+*	PIZZAS		003	7
+*	SALADES		002	5
+
+#	DESSERTS	GLACES		002	17
+#	SANDWICHS	BURGERS		002	17
+#	SANDWICHS	PANINIS		003	17
+#	SANDWICHS	SANDWICH	001	17
+
+
++	001   	001  	XSTAGIONI	0	7.8	1	7.1	1	8.5	1	PIZZAS    	0	0	0	0	0	0	0	079	1
++	002   	002  	MARGHERITA	0	6.6	1	6	1	7	1	PIZZAS    	0	0	0	0	0	0	1	033	1
++	003   	003  	PEPERONI	0	7	1	6.3	1	7.8	1	PIZZAS    	0	0	0	0	0	0	0	055	1
+
+&	RUE DES TILLEULS				0
+&	AULLES				0
+&	AELLUES				0
+&	RUE DES PIERRES	68220	ATTENSCHWILLER		0
+&	RUE DE BRETONS	68220	ATTENSCHWILLER		0
+&	RUE DU GABARRET	68200	ATTENSCHWILLER		0
+&	RUE BRETON	68220	ATTENSCHWILLER		0
+&	RUE CHARLES  DE GAULLE	68220	ATTENSCHWILLER		0
+&	RUE DU JURA		BETTLACH		0
+&	VOSGES	68220	BUSCHWILLER		0
+&	RUE DE HAGENTHAL	68220	FOLGENSBOURG		0
+&	RUE DE DELLE	68220	FOLGENSBOURG		0
+&	RUE FERETTE	68220	FOLGENSBOURG		0
+&	QUARTIER GUTEMBERT	68220	FOLGENSBOURG		0
+
+£	FLOR		0	              
+£	GUIL		0	              
+£	JULI		0	              
+£	L001		0	              
+£	LAUR		0	              
+£	OLIV		0	              
+
+$	0399705223	ARTMANN		6	RUE DES PRES	75001	PARIS								0	4295      	98.1	20041107	20090503	6			076459001	0
+$	0359584773	CUMMI		43	RUE WILSON	75002	PARIS								0	          	38.5	20090222	20090222	1			076389001	0
+$	0664430057	BAUN		38	RUE WILSON	91000	EVRY								0	          	446.6	20071110	20090905	10			076584003	0
+$	0389647121	ESTERMAN		51A	WILSON	91000	EVRY								0	4749      	72.2	20050827	20080531	43			076122003	0
+$	0381891864	BOHER		34	RUE WILSON	91990	BONDOUFLE								0	          	74.9	20090328	20090510	3			076466005	0
+
+
+Chaque ligne contient plusieur rubriques séparées par un séparateur (tabulation)
+
+LIGNE FAMILLE:
+	* +Separateur+ CODFAMILLE +Separateur+ CLASSEMENT +Separateur+ COULEUR
+
+LIGNE ARTICLE:
+	+ +Separateur+CODEPR+Separateur+CODECUISTO+Separateur+NOMPR+Separateur+QTESTOCK+Separateur+PRIXL+Separateur+TAUXTVA_L+Separateur+PRIXE+Separateur+TAUXTVA_E+Separateur+PRIXP+Separateur+TAUXTVA_P+Separateur+ 
+     	CODFAMILLE+Separateur+NBPOINTS+Separateur+NBPTSACHAT+Separateur+BGERESTOCK+Separateur+QTEMINI+Separateur+PRMENU+Separateur+BIMPRIMANTE2+Separateur+BPTSGRAT+Separateur+CLASSEMENT+Separateur+TAILLEPR
+
+LIGNE RUES:
+	& +Separateur+NOMRUE+Separateur+CPVILLERUE+Separateur+VILLERUE+Separateur+ZGRUE+Separateur+INTERDITE  
+
+
+LIGNE PERSONNEL:
+	£+Separateur+NUMLIVR+Separateur+PASS+Separateur+SALHEURE+Separateur+TELLIVR 
+
+LIGNE CLIENT:
+	$ +Separateur+TELCL+Separateur+NOMCL+Separateur+SOCIETE+Separateur+NUMERO+Separateur+RUECL+Separateur+CPCL+Separateur+VILLECL+Separateur+ETAGECL+Separateur+BATCL+Separateur+
+    	ESCALCL+Separateur+NUMPORTE+Separateur+CODEPORTE+Separateur+cODEPORTE2+Separateur+INTERPHONE+Separateur+NBPOINTS+Separateur+MOBILE+Separateur+CACL+Separateur+ 
+    	DATEARRIVE+Separateur+DATEFIN+Separateur+NBCMDES+Separateur+NOTE+Separateur+OTECOMPT +Separateur+UMCMDE+Separateur+EMPS				 
+
+LIGNE DES TEL EXCLUS
+	# +Separateur+STEL+Separateur+MOTIF  
+
+
+CONSEIL D UTILISATION:
+
+1>ouvrir fichier
+2>parcourrir chque ligne
+3>Pour chaque ligne
+     selon Premier caractere()
+
+	-  	: Extraire les valeur des rubriques FAMILLE puis enregistrer
+	+	: Extraire les valeur des rubriques Extraire les valeur des rubriques PRODUIT puis enregistrer
+	&	: Extraire les valeur des rubriques RUE puis enregistrer
+	£	: Extraire les valeur des rubriques LIVREUR puis enregistrer
+	$	: Extraire les valeur des rubriques CLIENT puis enregistrer
+	#	: Extraire les valeur des rubriques TELEXCLU puis enregistrer
+     Fin
+
+
+
+
+
+

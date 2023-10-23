@@ -1,0 +1,5 @@
+[GLOBAL]
+VERSION=1
+TAG=OSCAR-POS
+[FAA]
+LICENCE=C:\Oscarliv\licence_fr.txt

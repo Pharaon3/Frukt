@@ -14,9 +14,17 @@
               return 'Please enter your name or email address.'
             },
           ]" required></v-text-field>
-          <v-text-field v-model="sign.password" label="Password" :rules="[
-            v => !!v || 'Please enter your password.',
-          ]" type="password" required></v-text-field>
+          <v-text-field
+            v-model="sign.password"
+            label="Password"
+            :rules="[
+              v => !!v || 'Please enter your password.',
+            ]"
+            :append-icon="showPassword ? mdiEye : mdiEyeOff"
+            @click:append="togglePasswordVisibility"
+            :type="showPassword ? 'text' : 'password'"
+            required
+          ></v-text-field>
           <v-card-actions class="pt-0">
             <v-btn small @click="handleSignIn"> Sign In </v-btn>
             <v-spacer />
@@ -31,6 +39,11 @@
 </template>
 
 <script>
+import {
+  mdiEye,
+  mdiEyeOff,
+} from "@mdi/js"
+
 export default {
   name: "SignIn",
   components: {
@@ -41,6 +54,9 @@ export default {
   data() {
     return {
       sign: { username: "", password: "" },
+      showPassword: false,
+      mdiEye,
+      mdiEyeOff,
     }
   },
   computed: {
@@ -54,6 +70,9 @@ export default {
   beforeDestroy() {
   },
   methods: {
+    togglePasswordVisibility() {
+      this.showPassword = !this.showPassword
+    },
     handleSignIn() {
       let signPayload = this.sign
       signPayload.username = signPayload.username.trim()
@@ -79,6 +98,7 @@ export default {
           if(data.result === "true" || data.result === true) {
             console.log("data.res: ", data.res)
             document.getElementById("signin").style.display = "none"
+            document.getElementById("page").style.display = "block"
             this.setAccess(data.res.access)
           } else {
             document.getElementById("signin").style.display = "none"
